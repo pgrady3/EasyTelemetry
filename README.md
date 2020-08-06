@@ -10,6 +10,7 @@ A simple telemetry board designed to measure many useful things on an Eco-Marath
 * Measures vehicle position using cheap Chinese Ublox NEO-6M GPS modules
 * Integrates instataneous power into total energy (joules) consumed
 * Compatible with cheap Chinese 20x4 displays with I2C "LCD backpack"
+* Uses TE VAL-U-LOK connectors
 
 ## Output File
 
