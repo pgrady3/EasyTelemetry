@@ -4,17 +4,27 @@ A simple telemetry board designed to measure many useful things on an Eco-Marath
 
 ## Features
 * 15v-60v operation
-* 20A continuous current, 40A burst (more with heatsinking)
-* All through-hole design. Easy to solder!
-* Socket for automotive fuse
-* Automatic hall sensor identification
-* Extremely simple code. <200 lines with comments
-* Duty-cycle control
-* Teensy 3.2 microcontroller
-* L6387E gate drivers
-* IRFB7730 MOSFETS
-* BOM cost of 70 USD
-* Totally open source
+* Based on Teensy 3.2 microcontroller
+* Uses INA226 for measuring voltage and low-side current
+* Measures vehicle speed using hall gear-tooth sensor
+* Measures vehicle position using cheap Chinese Ublox NEO-6M GPS modules
+* Integrates instataneous power into total energy (joules) consumed
+* Compatible with cheap Chinese 20x4 displays with I2C "LCD backpack"
+
+## Output File
+
+The software creates log files in the following format
+
+``39.542 2.804 110.87 5.53 294087.16 5380.27 1407101 4.6546335 114.4687347
+39.511 3.111 122.93 5.51 294099.44 5380.78 1407201 4.6546288 114.4687347
+39.437 3.854 151.98 5.49 294114.66 5381.30 1407301 4.6546235 114.4687347
+39.437 3.854 151.98 5.48 294129.84 5381.82 1407401 4.6546183 114.4687347
+39.092 7.068 276.28 5.48 294157.47 5382.34 1407501 4.6546135 114.4687347
+39.020 7.721 301.29 5.49 294187.59 5382.85 1407601 4.6546082 114.4687347
+``
+
+corresponding to
+``voltage(V) current(A) power(w) velocity(m/s) energy(J) distance(m) elapsed time(ms) latitude(DD.dddd) longitude(DD.dddd)``
 
 ## Schematic
 
